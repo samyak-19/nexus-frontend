@@ -105,7 +105,7 @@ export default function Sidebar() {
 
         {!isSignedIn ? (
 
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 text-gray-600">
 
             <SignInButton mode="modal">
 
@@ -124,7 +124,7 @@ export default function Sidebar() {
 
             <SignUpButton mode="modal">
 
-              <button className="w-full border py-3 rounded-2xl font-semibold hover:bg-gray-100 transition">
+              <button className="w-full border py-3 rounded-2xl font-semibold hover:bg-gray-100 transition text-gray-600">
 
                 Sign Up
 
