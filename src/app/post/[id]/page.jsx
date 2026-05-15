@@ -40,7 +40,7 @@ export default function SinglePostPage(props) {
     try {
 
       const response = await fetch(
-        `http://localhost:5000/api/post/${id}`
+        `https://nexus-backend-lit8.onrender.com/api/post/${id}`
       );
 
       const data = await response.json();
@@ -61,7 +61,7 @@ export default function SinglePostPage(props) {
     try {
 
       const response = await fetch(
-        `http://localhost:5000/api/comment/${id}`
+        `https://nexus-backend-lit8.onrender.com/api/comment/${id}`
       );
 
       const data = await response.json();
@@ -88,7 +88,7 @@ export default function SinglePostPage(props) {
     console.log(token);
 
       const response = await fetch(
-        "http://localhost:5000/api/comment/create",
+        "https://nexus-backend-lit8.onrender.com/api/comment/create",
         {
           method: "POST",
 

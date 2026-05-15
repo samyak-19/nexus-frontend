@@ -80,7 +80,7 @@ export default function PostComposer({getToken}) {
 
 
       const response = await fetch(
-  "http://localhost:5000/api/post/create",
+  "https://nexus-backend-lit8.onrender.com/api/post/create",
   {
     method: "POST",
 

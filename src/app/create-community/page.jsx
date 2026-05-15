@@ -22,7 +22,7 @@ export default function CreateCommunityPage() {
     try {
 
       const response = await fetch(
-        "http://localhost:5000/api/community/create",
+        "https://nexus-backend-lit8.onrender.com/api/community/create",
         {
           method: "POST",
 

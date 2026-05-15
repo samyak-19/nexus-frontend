@@ -30,7 +30,7 @@ export default function ProfilePage() {
     try {
 
       const response = await fetch(
-        `http://localhost:5000/api/user/${clerkUser.id}`
+        `https://nexus-backend-lit8.onrender.com/api/user/${clerkUser.id}`
       );
 
       const data = await response.json();

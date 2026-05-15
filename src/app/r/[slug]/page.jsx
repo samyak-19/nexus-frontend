@@ -73,7 +73,7 @@ export default function CommunityPage({ params }) {
     try {
 
       const response = await fetch(
-        `http://localhost:5000/api/community/${slug}`
+        `https://nexus-backend-lit8.onrender.com/api/community/${slug}`
       );
 
       const data = await response.json();
@@ -100,7 +100,7 @@ export default function CommunityPage({ params }) {
 
 
       const response = await fetch(
-        `http://localhost:5000/api/post/community/${slug}?sort=${sortType}`
+        `https://nexus-backend-lit8.onrender.com/api/post/community/${slug}?sort=${sortType}`
       );
 
       const data = await response.json();
@@ -136,7 +136,7 @@ export default function CommunityPage({ params }) {
     try {
 
       await fetch(
-        "http://localhost:5000/api/vote",
+        "https://nexus-backend-lit8.onrender.com/api/vote",
         {
           method: "POST",
 

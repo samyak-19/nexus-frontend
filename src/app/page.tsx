@@ -51,7 +51,7 @@ export default function HomePage() {
 
 
       const response = await fetch(
-        `http://localhost:5000/api/post?sort=${sortType}`
+        `https://nexus-backend-lit8.onrender.com/api/post?sort=${sortType}`
       );
 
 
@@ -88,7 +88,7 @@ export default function HomePage() {
 
 
     await fetch(
-      "http://localhost:5000/api/vote",
+      "https://nexus-backend-lit8.onrender.com/api/vote",
       {
         method: "POST",
 
