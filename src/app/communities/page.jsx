@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import CommunityCard from "../../components/community/CommunityCard";
 
 export default function CommunitiesPage() {
 
@@ -31,33 +32,96 @@ export default function CommunitiesPage() {
     }
   };
 
-  return (
-    <div className="p-10">
+ return (
+  <div>
 
-      <h1 className="text-3xl font-bold mb-6">
-        Communities
-      </h1>
+    {/* HEADER */}
 
-      <div className="space-y-4">
+    <div className="flex items-center justify-between">
 
-        {communities.map((community) => (
+      <div>
 
-          <Link
-            key={community.id}
-            href={`/r/${community.slug}`}
-            className="block border p-4 rounded-lg hover:bg-gray-100"
-          >
+        <p className="uppercase tracking-[0.3em] text-sm text-gray-400 font-bold">
 
-            <h2 className="text-xl font-semibold">
-              r/{community.name}
-            </h2>
+          Discover
 
-          </Link>
+        </p>
 
-        ))}
+        <h1 className="text-6xl font-black mt-3 text-gray-700">
+
+          Communities
+
+        </h1>
 
       </div>
 
+
+
+
+      <Link
+        href="/create-community"
+        className="bg-black text-white px-8 py-4 rounded-2xl hover:scale-105 transition"
+      >
+        New Community
+      </Link>
+
     </div>
-  );
+
+
+
+
+
+
+    {/* FILTERS */}
+
+    <div className="flex gap-4 mt-10 flex-wrap">
+
+      <button className="bg-black text-white px-6 py-3 rounded-2xl">
+
+        All
+
+      </button>
+
+      <button className="border px-6 py-3 rounded-2xl hover:bg-gray-100">
+
+        Engineering
+
+      </button>
+
+      <button className="border px-6 py-3 rounded-2xl hover:bg-gray-100">
+
+        Design
+
+      </button>
+
+      <button className="border px-6 py-3 rounded-2xl hover:bg-gray-100">
+
+        Product
+
+      </button>
+
+    </div>
+
+
+
+
+
+
+    {/* COMMUNITY GRID */}
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-12">
+
+      {communities.map((community) => (
+
+        <CommunityCard
+          key={community.id}
+          community={community}
+        />
+
+      ))}
+
+    </div>
+
+  </div>
+);
 }

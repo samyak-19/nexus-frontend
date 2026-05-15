@@ -23,4 +23,26 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+html {
+  scroll-behavior: smooth;
+  input,
+textarea,
+button {
+  transition: all 0.2s ease;
+} 
+}
+* {
+  transition: background 0.2s ease,
+              border 0.2s ease,
+              transform 0.2s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  transition: transform 0.3s ease;
 }
