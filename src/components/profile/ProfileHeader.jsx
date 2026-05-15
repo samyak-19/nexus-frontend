@@ -65,7 +65,7 @@ export default function ProfileHeader({
 
           <p className="text-4xl font-black mt-2">
 
-            {user?.posts?.length}
+            {user?.posts?.length ||0}
 
           </p>
 
